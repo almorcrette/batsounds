@@ -10,6 +10,7 @@ scalaVersion := "2.13.11"
 libraryDependencies += guice
 
 libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-core" % "2.1.1",
   "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
 )
 

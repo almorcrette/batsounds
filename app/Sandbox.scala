@@ -27,7 +27,7 @@ object TrimAudio extends App {
 
   val fileFormat: AudioFileFormat = AudioSystem.getAudioFileFormat(url)
   val format: AudioFormat = fileFormat.getFormat
-  val inputStream = AudioSystem.getAudioInputStream(url)
+  val inputStream: AudioInputStream = AudioSystem.getAudioInputStream(url)
   val bytesPerSecond: Int = (format.getFrameSize * format.getFrameRate).toInt
   inputStream.skip(startSecond * bytesPerSecond)
   val framesOfAudioToCopy: Long = (secondsToCopy * format.getFrameRate).toLong
